@@ -1,1 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>EitherMouse - Multiple mice, individual settings...</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+margin: 50;
+padding: 10;
+font-family: Calibri,Tahoma, Arial;
+background-color: #e0e0e0;
+}
+a { text-decoration: none; color: blue; }
+a:hover { color: darkblue; text-decoration: underline; }
+a:visited { color: darkviolet; }
+img {
+max-width: 100%;
+display: block;
+}
+</style>
+</head>
 
+
+<body bgcolor="e0e0e0">
+<table>
+<tbody><tr><td align="center" valign="top">
+<img src="./images/more.png" width="204" height="409"><br><br>
+<a href="./EitherMouseSetup.exe"><img src="./images/download.png" alt="Download" border="0" width="300" height="133"></a><br>
+<a href="./EitherMouseSetup.exe"><b>EitherMouseSetup.exe</b></a><br><br><a href="./EitherMouse.exe"><b>EitherMouse.exe</b></a><br><br><a href="./EitherMouse.zip"><b>EitherMouse.zip</b></a><br><br>
+<br>
+</td><td valign="top">
+<center><h1><font color="darkblue">EitherMouse</font></h1>
+<h3>Multiple mice, individual settings...</h3></center>
+<ul>
+<li>Instantly changes settings when any mouse is used:
+<ul><li>swap buttons</li><li>mirror cursor</li><li>adjust speeds</li><li>and more...</li></ul><br>
+</li><li>Leave multiple mice on a pc and automatically swap buttons on each mouse.<br>
+</li><li>Have a left-handed and a right-handed mouse always connected and ready to use.<br>
+</li><li>Match speeds across different mice, ie touchpad and mouse with different speeds.<br>
+</li><li>Accommodate left-handed and right handed users easily on multi-user or public workstations.<br>
+</li><li>Helps prevent RSI/injury issues by allowing seemless switching between hands.<br>
+</li><li>Quickly change mouse settings from system tray if only one mouse is used.<br>
+<br>
+</li><li><b>Freeware!</b> no ads, no nags, free software, suggestions appreciated!<br><center><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=gwarble@gmail.com&amp;lc=US&amp;item_name=EitherMouse&amp;no_note=0&amp;cn=&amp;curency_code=USD" target="_blank"><img src="./images/donate-button.png" width="135" height="44"></a></center>
+<br>
+</li><li>100% virus, malware, and spyware free for over 10 years!  Despite many <a href="https://www.autohotkey.com/boards/viewtopic.php?p=289544#p289544" target="_blank">false positives...</a><center><a href="https://www.autohotkey.com/boards/viewtopic.php?p=289544#p289544" target="_blank"><img src="./images/dr-mario.gif" height="60"></a></center>
+<br>
+</li><li>Tested on: Windows 10, 8.1, 8, 7, Vista, and XP, feedback welcome!<br><center><img src="./images/Windows.png" height="109"></center>
+</li></ul>
+</td></tr></tbody></table>
+<br>
+<b>feedback greatly appreciated</b> via email: <a href="mailto:gwarble@gmail.com">gwarble@gmail.com</a> or on the forum here:<br><br>
+<a href="https://autohotkey.com/boards/viewtopic.php?t=3648" target="_blank"><b>EitherMouse</b> - Multiple mice, individual settings...</a><br><br>
+<br>
+<img src="./images/em.png">
+<br>
+<h3>Changes:</h3>
+<ul>
+    <li><b>0.79</b> &nbsp; MultiCursor placeholder uses original cursor</li>
+    <li><b>0.75</b> &nbsp; Reverse scroll and horizontal scroll added</li>
+    <li><b>0.66</b> &nbsp; Fixed losing track of mice on resume from sleep/lock</li>
+    <li><b>0.59</b> &nbsp; plugin system via windows messages
+    	<ul><li>Enhance Pointer Precision option</li>
+	    <li>Large and Extra Large mirrored cursors</li>
+        <li>Tray icon selection</li></ul>
+    <li><b>0.59</b> &nbsp; font/gui size fixes (dpi awareness)
+	    <ul><li>admin rights fixes</li>
+	    <li>multicursor tooltip made optional</li></ul>
+    <li><b>0.56</b> &nbsp; MultiCursor mode added
+    <li><b>0.53</b> &nbsp; gui replacement for tray menu</li>
+    <li><b>0.52</b> &nbsp; installer created</li>
+    <li><b>0.48</b> &nbsp; No external files created!</li>
+	    <ul><li>Loads cursors from EXE resources</li>
+	    <li>Settings moved from ini to registry</li>
+        <li>Automatic updates implemented...</li></ul>
+    <li><b>0.47</b> &nbsp; bug fixes, major code cleanup</li>
+    <li><b>0.46</b> &nbsp; system/api method for swapping buttons by default
+	    <ul><li>settings and other fixes</li></ul>
+    <li><b>0.43</b> &nbsp; any number of mice supported
+	    <ul><li>mirrored cursors added</li>
+	    <li>Extract source option and -source parameter</li>
+	    <li>"-delay seconds" command line parameter</li></ul>
+    <li><b>0.41</b> &nbsp; fixed ctrl-shift bug</li>
+    <li><b>0.4 &nbsp;</b> &nbsp; improved interface/settings/installation/third mouse
+	    <ul><li>added quick swap of mouse buttons for single-mouse systems</li>
+	    <li>fixed bug if initially swapped, wouldnt drag</li></ul>
+    <li><b>0.3 &nbsp;</b> &nbsp; cleaned up UI and code, fixed hotkeys (for dragging)
+	    <ul><li>improved initial detection</li>
+	    <li>added settings saving</li>
+	    <li>added install/startup settings</li></ul>
+    <li><b>0.1 &nbsp;</b> &nbsp; initial idea test
+	    <ul><li>detect different HID device mouse</li>
+	    <li>swap buttons on second mouse</li>
+	    <li>show active mouse visually with tray icon</li>
+	    <li>define which mouse is which at initialization</li></ul>
+</ul>
+<img src="./images/History.png" width="1152" height="643">
+<br>
+<br>
+<b><script type="text/javascript" src="https://www.EitherMouse.com/visitors.php?page=visitors"></script></b> visitors since September 2019.<br><br>&copy; 2009-2022 Steffen Sofware.  All rights reserved.  &nbsp; <a href="eula.txt">License...</a>
+</font>
+
+</body></html>
