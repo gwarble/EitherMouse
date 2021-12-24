@@ -1,0 +1,17 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1
+RewriteCond %{ENV:HTTPS} !on [NC]
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301]
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^Mirror$ "https://autohotkey.com/joe_df/autohotkey_scripts_archive/EitherMouse_v0.64/" [R=302,NC]
+RewriteRule ^Beta$ "https://www.EitherMouse.com/Beta/" [R=301,NC]
+RewriteRule ^Browse$ "https://www.EitherMouse.com/Browse.php" [R=302,NC]
+RewriteRule ^License.*$ "https://www.EitherMouse.com/License.txt" [R=302,NC]
+RewriteRule ^cpanel$ "https://cpanel.freehosting.com:2083/" [R=302,NC]
+
+ErrorDocument 401 https://www.EitherMouse.com
+ErrorDocument 403 https://www.EitherMouse.com
+ErrorDocument 404 https://www.EitherMouse.com
+ErrorDocument 500 https://www.EitherMouse.com
