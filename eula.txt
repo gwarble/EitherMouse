@@ -1,0 +1,40 @@
+       EitherMouse
+     Steffen Software
+    www.EitherMouse.com
+
+ END-USER LICENSE AGREEMENT
+
+1. DEFINITIONS - The following terms shall have the respective meanings indicated:
+"Licensor" means Steffen Software and/or Joel Steffen.
+"Licensee" means You or Your Company, the end user.
+"Software" means the contents of the files, downloads, or other media that make up EitherMouse.
+"Use" means to access, install, download, copy or otherwise benefit from the functionality of the Software.
+
+2. GENERAL USE - You are granted a non-exclusive license to Use the Software for an unlimited period of time, free of charge.
+The Software may be installed and Used by the Licensee on any number of systems, for any legal purpose.
+The Software may not be distributed or copied for distribution.
+The Licensee acknowledges and agrees that the Licensor retains all copyrights and other proprietary rights in and to the Software.
+Use within the scope of this License is free of charge and no royalty or licensing fees shall be paid by the Licensee, to anyone.
+
+3. INTELLECTUAL PROPERTY RIGHTS - The Software is owned by the Licensor.
+The Software and any copies that the Licensee is authorized to make are the intellectual property of and are owned by the Licensor.
+The Software is protected by copyright, including without limitation by Copyright Law and international treaty provisions.
+Any copies that the Licensee is permitted to make must contain the same copyright and other notices that appear on or in the Software.
+Any attempts to reverse-engineer, copy, clone, decompile, disassemble, modify or alter in any way the Software are strictly prohibited.
+
+4. WARRANTY - The Software is delivered "AS IS" and the Licensor makes no warranty as to its use or performance.
+To the best of the Licensor's knowledge, the Software does not infringe upon or violate any intellectual property right of any third party.
+The Licensor does not and cannot warrant the performance or results the Licensee may obtain by using the Software.
+The entire risk arising out of use or performance of the Software remains with the Licensee.
+The Licensor gives no warranty, express or implied, that the Software will be of satisfactory quality, useful for any particular purpose,
+  or that the Software will operate error free or without interruption or that any errors will be corrected.
+
+5. LIMITATION OF LIABILITY
+In no event will the Licensor be liable for any damages, claims or costs whatsoever or any consequential, indirect, incidental damages,
+  or any lost profits or lost savings, even if the Licensor has been advised of the possibility of such loss, damages, claims or costs.
+In no event will the Licensee be liable to the Licensor on condition that the Licensee complies with the terms stated in this License.
+
+6. NON-WAIVER
+If a portion of this agreement is held unenforceable, the remainder shall be valid.
+A party's failure to exercise any right under this Agreement will not constitute a waiver of any other terms or conditions of this
+  Agreement, or a right at any time thereafter to require exact and strict compliance with the terms of this Agreement.
