@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<title>gwarble's Tools</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="http://www.autohotkey.com/docs/css/commands.css" rel="stylesheet" type="text/css">
+<link href="http://www.autohotkey.com/docs/css/print.css"    rel="stylesheet" type="text/css" media="print">
+</head><body>
+
+<table width="100%"><tbody><tr>
+<td><h1>gwarble's Tools</h1></td>
+<td width="150"><a href="http://www.autohotkey.com/">AutoHotkey Homepage</a><br>
+<a href="index.html">gwarble's Tools</a></td>
+</tr></tbody></table>
+<hr size="2">
+<p>a couple functions and scripts i've found useful and worthy of sharing:</p>
+<p class="CommandSyntax"><b>Functions:</b><br>
+<a href=Notify/>Notify</a>()<br>
+<a href=Compile/>Compile</a>()<br>
+<a href=Instance/>Instance</a>()<br>
+<br><b>Apps:</b><br>
+<a href=http://www.autohotkey.com/forum/topic48238.html>EitherMouse</a><br>
+<a href=http://www.autohotkey.com/forum/viewtopic.php?p=297445#297445>Notify</a></p>
+<h4>Related</h4>
+<p><a href="http://www.autohotkey.com/">AutoHotkey</a></p>
+<h4>Example</h4>
+<pre class="NoIndent">#SingleInstance, Off   <span class="CodeCom">; required by Instance() for obvious reasons, may be included later</span>
+Instance()  <span class="CodeCom">; checks for parameters/label</span>
+    Gui, Add, Button, gSynchronous,  Instance("-Beep")
+    Gui, Add, Button, g-Beep, SoundBeep
+    Gui, Show
+Return
+
+Synchronous:
+   Instance("-Beep") <span class="CodeCom">; starts another instance and runs the beep label</span>
+Return
+
+-Beep:  <span class="CodeCom">; this can be run by the second instance, synchronously</span>
+   TrayTip, Beep..., Instance()
+   SoundBeep, 300, 5000 <span class="CodeCom">; or the SoundBeep button, asynchronously (paused)</span>
+   TrayTip
+Return
+
+#Include *i Instance.ahk  <span class="CodeCom">;= use stdlib and remove this line<span></pre>
+<hr>
+<p><a href="http://www.autohotkey.com/">AutoHotkey Homepage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.html">gwarble's Tools</a></p>
+</body></html>
