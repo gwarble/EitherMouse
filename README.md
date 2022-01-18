@@ -22,3 +22,5 @@ Multiple mice, individual settings...
  Feedback greatly appreciated
   via email: gwarble@gmail.com
   on the forum: https://autohotkey.com/boards/viewtopic.php?t=3648
+
+![Visitor Count](https://profile-counter.glitch.me/gwarble/count.svg)
