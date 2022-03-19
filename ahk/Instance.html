@@ -15,10 +15,9 @@
 <p>Create another instance/process of the running script, to perform an asynchronous task without interrupting the main script.</p>
 <p class="CommandSyntax">Instance(["Label","Params"])</p>
 <p>This function should be called once from the auto-execute section without any parameters:</p>
-<pre class="NoIndent">Instance()<span class="CodeCom"></span>
-<span class="CodeCom">; if a new instance request is found, function stops normal auto-execution</span></pre>
+<pre class="NoIndent">Instance()<span class="CodeCom"></span></pre>
 <p>This call will direct the script into the
-<i>Label:</i> subroutine when a command line parameter matches your <i>Label</i>.</p>
+<i>Label:</i> subroutine when a command line parameter matches your <i>Label</i>, and override the rest of the autoexec section</p>
 <p>Elsewhere in your script, a new instance can be created to perform some task, by calling <i>Instance("Label")</i>.  The <i>Label</i> subroutine will be run in the new
 instance.</p>
 <h4>Parameters</h4>
