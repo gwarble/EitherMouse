@@ -1,7 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html><head>
 
-
 <title>Instance()</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link href="https://autohotkey.com/docs/static/theme.css" rel="stylesheet" type="text/css">
@@ -16,8 +15,8 @@
 <p>Create another instance/process of the running script, to perform an asynchronous task without interrupting the main script.</p>
 <p class="CommandSyntax">Instance(["Label","Params"])</p>
 <p>This function should be called once from the auto-execute section without any parameters:</p>
-<pre class="NoIndent">If Instance()<span class="CodeCom"></span>
-Return   <span class="CodeCom">; if a new instance request is found, stop normal auto-execution</span></pre>
+<pre class="NoIndent">Instance()<span class="CodeCom"></span>
+<span class="CodeCom">; if a new instance request is found, function stops normal auto-execution</span></pre>
 <p>This call will direct the script into the
 <i>Label:</i> subroutine when a command line parameter matches your <i>Label</i>.</p>
 <p>Elsewhere in your script, a new instance can be created to perform some task, by calling <i>Instance("Label")</i>.  The <i>Label</i> subroutine will be run in the new
@@ -32,16 +31,16 @@ instance.</p>
   <tr> 
     <td width="15%">Params</td>
     <td width="85%"><p>[<i>None</i>] - any extra params to be sent to <i>Label</i> in new instance.<br>These can be accessed in <i>Label:</i> as normal, %2%...</p>
-    <p><i>Prefix</i> - when initializing (ie: Label=""), a prefix can be used to isolate label names and stop conflicts</p></td>
+    <p><i>Prefix</i> - when initializing (ie: Label=""), a prefix can be used to isolate label names and stop conflicts (Default "-")</p></td>
   </tr>
 </table>
 <h4>Related</h4>
 <p><a href="http://www.autohotkey.com/docs/commands/_SingleInstance.htm"> #SingleInstance</a>, <a href="http://www.autohotkey.com/forum/viewtopic.php?t=49028"> Thread()</a>, <a href="http://www.autohotkey.com/docs/commands/Exit.htm">Exit</a>, <a href="http://www.autohotkey.com/docs/commands/ExitApp.htm">ExitApp</a></p>
 <h4>Example</h4>
 <pre class="NoIndent"><span class="CodeCom">; this example will use the SoundBeep command normally or with Instance()</span>
-#SingleInstance, Off   <span class="CodeCom">; recommended, use OnMessage to act like Force</span>
- If Instance("","-")  <span class="CodeCom">; checks for parameters/label</span>
-  Return
+#NoEnv
+Instance()  <span class="CodeCom">; checks for parameters/label</span>
+; and redirects auto-execute section to the %1% label
  Gui, Add, Button, gSynchronous,  Instance("-Beep")
  Gui, Add, Button, gBeep, SoundBeep
  Gui, Show
