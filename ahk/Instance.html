@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<title>Instance()</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="http://www.autohotkey.com/docs/css/commands.css" rel="stylesheet" type="text/css">
+<link href="http://www.autohotkey.com/docs/css/print.css"    rel="stylesheet" type="text/css" media="print">
+</head><body>
+
+<table width="100%"><tbody><tr>
+<td><h1>Instance()</h1></td>
+<td width="150"><a href="index.html">gwarble's Tools</a><br>
+<a href="Instance.ahk">Download</a></td>
+</tr></tbody></table>
+<hr size="2">
+<p>Create another instance/process of the running script, to perform an asynchronous task without interrupting the main script.</p>
+<p class="CommandSyntax">Instance(["Label","Params"])</p>
+<p>This function should be called once from the auto-execute section without any parameters:</p>
+<pre class="NoIndent">If Instance()<span class="CodeCom"></span>
+Return   <span class="CodeCom">; if a new instance request is found, stop normal auto-execution</span></pre>
+<p>This call will direct the script into the
+<i>Label:</i> subroutine when a command line parameter matches your <i>Label</i>.</p>
+<p>Elsewhere in your script, a new instance can be created to perform some task, by calling <i>Instance("Label")</i>.  The <i>Label</i> subroutine will be run in the new
+instance.</p>
+<h4>Parameters</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="3" bordercolor="#C0C0C0">
+  <tr> 
+    <td width="15%">Label</td>
+    <td width="85%"><p>[<i>None</i>] - checks first command-line parameter and starts new instance if label found</p>
+    <p><i>Label</i> - Label name/subroutine ran when called (in second instance)</p></td>
+  </tr>
+  <tr> 
+    <td width="15%">Params</td>
+    <td width="85%"><p>[<i>None</i>] - any extra params to be sent to <i>Label</i> in new instance.<br>These can be accessed in <i>Label:</i> as normal, %2%...</p>
+    <p><i>Prefix</i> - when initializing (ie: Label=""), a prefix can be used to isolate label names and stop conflicts</p></td>
+  </tr>
+</table>
+<h4>Related</h4>
+<p><a href="http://www.autohotkey.com/docs/commands/_SingleInstance.htm"> #SingleInstance</a>, <a href="http://www.autohotkey.com/forum/viewtopic.php?t=49028"> Thread()</a>, <a href="http://www.autohotkey.com/docs/commands/Exit.htm">Exit</a>, <a href="http://www.autohotkey.com/docs/commands/ExitApp.htm">ExitApp</a></p>
+<h4>Example</h4>
+<pre class="NoIndent"><span class="CodeCom">; this example will use the SoundBeep command normally or with Instance()</span>
+#SingleInstance, Off   <span class="CodeCom">; recommended, use OnMessage to act like Force</span>
+ If Instance("","-")  <span class="CodeCom">; checks for parameters/label</span>
+  Return
+ Gui, Add, Button, gSynchronous,  Instance("-Beep")
+ Gui, Add, Button, gBeep, SoundBeep
+ Gui, Show
+Return
+
+Synchronous:
+   Instance("-Beep") <span class="CodeCom">; starts another instance and runs the beep label</span>
+Return
+
+-Beep:  <span class="CodeCom">; this will be run by the second instance, synchronously</span>
+   TrayTip, Beep..., Secondary Instance <span class="CodeCom">; without pausing your script</span>
+   SoundBeep, 500, 1000
+ExitApp
+
+Beep:   <span class="CodeCom">; normal asnchronous behavior of SoundBeep</span>
+   TrayTip, Beep..., Main Instance
+   SoundBeep, 500, 1000
+   TrayTip
+Return
+</pre><hr>
+<p><a href="http://www.autohotkey.com/">AutoHotkey Homepage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.html">gwarble's Tools</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Instance.ahk">Download Instance.ahk</a></p>
+</body></html>

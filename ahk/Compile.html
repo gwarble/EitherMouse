@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+
+
+<title>Compile()</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="http://www.autohotkey.com/docs/css/commands.css" rel="stylesheet" type="text/css">
+<link href="http://www.autohotkey.com/docs/css/print.css"    rel="stylesheet" type="text/css" media="print">
+</head><body>
+
+<table width="100%"><tbody><tr>
+<td><h1>Compile()</h1></td>
+<td width="150"><a href="index.html">gwarble's Tools</a><br>
+<a href="Compile.ahk">Download</a></td>
+</tr></tbody></table>
+<hr size="2">
+<p>Compile the running script, with local icons or ahkSC.bin file, and optionally run it.</p>
+<p class="CommandSyntax">Compile(["Action","Name","Password"])</p>
+<p>See example calls below, typically run Compile once from the auto-execute section. It can also be called
+from anywhere to compile at will. Any <i>.ico</i> or <i>.AHK.bin</i> files found with the same name as the
+calling script will be used on compilation.</p>
+<h4>Parameters</h4>
+<table border="1" width="100%" cellspacing="0" cellpadding="3" bordercolor="#C0C0C0">
+  <tr> 
+    <td width="15%">Action</td>
+    <td width="85%"><p>[<i>None</i>] - Default behavior will compile the script, waiting for completion, and then continue running the script.</p>
+    <p><i>"NoWait"</i> - will start the compiler and continue running, without waiting.</p>
+    <p><i>"Run"</i> - will compile (and wait), then close this script and run the .exe</p>
+    <p><i>"Recompile"</i> - will (if already compiled) close the running .exe, and launch the .ahk (which will recompile if "Run" is used).</p></td>
+  </tr>
+  <tr> 
+    <td width="15%">Name</td>
+    <td width="85%"><p>[<i>None</i>] - Default behavior compile into A_ScriptName.exe</p>
+    <p><i>Other</i> - will use Other.ico, Other.AHK.bin, and create Other.exe</p></td>
+  </tr>
+  <tr> 
+    <td width="15%">Password</td>
+    <td width="85%"><p>[<i>None</i>] password to use for compiler.</p></td>
+  </tr>
+</table>
+<h4>Related</h4>
+<p><a href="http://www.autohotkey.com/docs/commands/_SingleCompile.htm"> Ahk2Exe</a>, <a href="http://www.autohotkey.com/docs/commands/_SingleCompile.htm"> Thread()</a>, <a href="http://www.autohotkey.com/docs/commands/Exit.htm">Exit</a>, <a href="http://www.autohotkey.com/docs/commands/ExitApp.htm">ExitApp</a></p>
+<h4>Example</h4>
+<pre class="NoIndent">Compile("Run")                  <span class="CodeCom">;= compiles .ahk into .exe, runs the .exe and exits the .ahk</span>
+Compile()                           <span class="CodeCom">;= compiles .ahk into .exe, then continues running the .ahk</span>
+Compile("NoWait")              <span class="CodeCom">;= starts compiler and returns to .ahk without waiting</span>
+Compile("","NewName")      <span class="CodeCom">;= use a custom Name (for input .ico/bin and output exe)</span></pre>
+<hr>
+<p><a href="http://www.autohotkey.com/">AutoHotkey Homepage</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="index.html">gwarble's Tools</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="Compile.ahk">Download Compile.ahk</a></p>
+</body></html>
